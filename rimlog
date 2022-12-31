@@ -1,0 +1,26 @@
+Root level exception in OnGUI(): System.ArgumentNullException: key
+Parameter name: Null key
+  at System.Runtime.CompilerServices.ConditionalWeakTable`2[TKey,TValue].TryGetValue (TKey key, TValue& value) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UseBestMaterials.State.For (RimWorld.Bill bill, System.Boolean create) [0x0002e] in <1e16a5e840a44bc8a183e15b456880fd>:0 
+  at UseBestMaterials.Patches_Bill.FindBestIngredients (System.Collections.Generic.List`1[T] availableThings, System.Boolean& alreadySorted, RimWorld.Bill bill, Verse.IntVec3 rootCell) [0x00000] in <1e16a5e840a44bc8a183e15b456880fd>:0 
+  at (wrapper dynamic-method) RimWorld.WorkGiver_DoBill.RimWorld.WorkGiver_DoBill.TryFindBestIngredientsInSet_NoMixHelper_Patch1(System.Collections.Generic.List`1<Verse.Thing>,System.Collections.Generic.List`1<Verse.IngredientCount>,System.Collections.Generic.List`1<Verse.ThingCount>,Verse.IntVec3,bool,System.Collections.Generic.List`1<Verse.IngredientCount>,RimWorld.Bill)
+  at RimWorld.WorkGiver_DoBill+<>c__DisplayClass22_0.<TryFindBestFixedIngredients>b__1 (System.Collections.Generic.List`1[T] foundThings) [0x0001e] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.WorkGiver_DoBill.TryFindBestIngredientsHelper (System.Predicate`1[T] thingValidator, System.Predicate`1[T] foundAllIngredientsAndChoose, System.Collections.Generic.List`1[T] ingredients, Verse.Pawn pawn, Verse.Thing billGiver, System.Collections.Generic.List`1[T] chosen, System.Single searchRadius) [0x001ec] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.WorkGiver_DoBill.TryFindBestFixedIngredients (System.Collections.Generic.List`1[T] ingredients, Verse.Pawn pawn, Verse.Thing ingredientDestination, System.Collections.Generic.List`1[T] chosen, System.Single searchRadius) [0x00022] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.CompBiosculpterPod.CanReachRequiredIngredients (Verse.Pawn pawn, RimWorld.CompBiosculpterPod_Cycle cycle, System.Boolean useCache) [0x00070] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.CompBiosculpterPod.CanReachOrHasIngredients (Verse.Pawn hauler, Verse.Pawn biosculptee, RimWorld.CompBiosculpterPod_Cycle cycle, System.Boolean useCache) [0x0001a] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.CompBiosculpterPod.CannotUseNowPawnCycleReason (Verse.Pawn hauler, Verse.Pawn biosculptee, RimWorld.CompBiosculpterPod_Cycle cycle, System.Boolean checkIngredients) [0x0005e] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.CompBiosculpterPod.CannotUseNowPawnCycleReason (Verse.Pawn p, RimWorld.CompBiosculpterPod_Cycle cycle, System.Boolean checkIngredients) [0x00000] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.CompBiosculpterPod+<CompFloatMenuOptions>d__93.MoveNext () [0x00155] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at Verse.ThingWithComps+<GetFloatMenuOptions>d__40.MoveNext () [0x00102] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.FloatMenuMakerMap.AddHumanlikeOrders (UnityEngine.Vector3 clickPos, Verse.Pawn pawn, System.Collections.Generic.List`1[T] opts) [0x05b47] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.FloatMenuMakerMap.ChoicesAtFor (UnityEngine.Vector3 clickPos, Verse.Pawn pawn, System.Boolean suppressAutoTakeableGoto) [0x000ae] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.FloatMenuMakerMap.TryMakeFloatMenu (Verse.Pawn pawn) [0x000dc] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.Selector.HandleMapClicks () [0x000ac] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.Selector.SelectorOnGUI () [0x00000] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.MapInterface.HandleLowPriorityInput () [0x0000f] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at RimWorld.UIRoot_Play.UIRootOnGUI () [0x000dd] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+  at Verse.Root.OnGUI () [0x0003d] in <3126aca1aad041dcbdeda807cfe004bf>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+(wrapper dynamic-method) Verse.Log:Verse.Log.Error_Patch1 (string)
+Verse.Root:OnGUI ()
